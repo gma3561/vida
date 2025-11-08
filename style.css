@@ -218,6 +218,7 @@ body.nav-open {
   text-transform: uppercase;
   font-size: 0.85rem;
   padding-left: 0.3rem;
+  margin-top: 2rem;
 }
 
 .nav a {
