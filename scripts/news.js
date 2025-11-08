@@ -19,6 +19,17 @@
     card.setAttribute('role', 'link');
     card.dataset.id = item.id;
 
+    // Add image if available
+    if (item.image) {
+      const imageEl = document.createElement('div');
+      imageEl.className = 'news-card__image';
+      imageEl.style.backgroundImage = `url('${item.image}')`;
+      card.appendChild(imageEl);
+    }
+
+    const contentEl = document.createElement('div');
+    contentEl.className = 'news-card__content';
+
     const timeEl = document.createElement('time');
     timeEl.dateTime = item.date || '';
     timeEl.textContent = item.displayDate || item.date || '';
@@ -29,9 +40,9 @@
     const excerptEl = document.createElement('p');
     excerptEl.textContent = item.excerpt || '';
 
-    card.appendChild(timeEl);
-    card.appendChild(titleEl);
-    card.appendChild(excerptEl);
+    contentEl.appendChild(timeEl);
+    contentEl.appendChild(titleEl);
+    contentEl.appendChild(excerptEl);
 
     if (Array.isArray(item.categories) && item.categories.length) {
       const categoriesEl = document.createElement('div');
@@ -43,8 +54,10 @@
         badge.textContent = cat;
         categoriesEl.appendChild(badge);
       });
-      card.appendChild(categoriesEl);
+      contentEl.appendChild(categoriesEl);
     }
+
+    card.appendChild(contentEl);
 
     card.addEventListener('click', () => gotoDetail(item.id));
     card.addEventListener('keydown', (event) => {
