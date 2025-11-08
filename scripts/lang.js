@@ -11,7 +11,7 @@
     localStorage.setItem('vida-lang', lang);
 
     // Update all elements with language data attributes
-    const elements = document.querySelectorAll('[data-lang-en], [data-lang-ko]');
+    const elements = document.querySelectorAll('[data-lang-en], [data-lang-pt]');
     elements.forEach((el) => {
       const text = el.getAttribute(`data-lang-${lang}`);
       if (text) {
@@ -31,7 +31,7 @@
     });
 
     // Update HTML lang attribute
-    document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+    document.documentElement.lang = lang === 'pt' ? 'pt' : 'en';
   }
 
   // Add click handlers to language buttons

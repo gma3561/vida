@@ -27,13 +27,13 @@
       <div class="sidebar__scrim" hidden data-sidebar-scrim></div>
       <div class="sidebar__panel" id="sidebar-panel" data-sidebar-panel>
         <nav class="nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="news.html">News</a>
-          <a href="facilities.html">Facility</a>
-          <a class="active" href="rooms.html">Room/Rates</a>
-          <a href="reservation.html">Reservation</a>
-          <a href="access.html">Access</a>
-          <a href="faq.html">FAQ</a>
+          <a href="index.html" data-lang-en="Home" data-lang-pt="Início">Home</a>
+          <a href="news.html" data-lang-en="News" data-lang-pt="Notícias">News</a>
+          <a href="facilities.html" data-lang-en="Facility" data-lang-pt="Instalações">Facility</a>
+          <a class="active" href="rooms.html" data-lang-en="Room/Rates" data-lang-pt="Quartos/Tarifas">Room/Rates</a>
+          <a href="reservation.html" data-lang-en="Reservation" data-lang-pt="Reserva">Reservation</a>
+          <a href="access.html" data-lang-en="Access" data-lang-pt="Acesso">Access</a>
+          <a href="faq.html" data-lang-en="FAQ" data-lang-pt="FAQ">FAQ</a>
         </nav>
         <div class="sidebar__footer">
           <div class="contact">
@@ -41,7 +41,11 @@
             <span>+351 21 000 1234</span>
             <span>Rua Nova da Vida 27, Lisboa</span>
           </div>
-          <div class="langs">EN / PT</div>
+          <div class="langs">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <span> / </span>
+            <button class="lang-btn" data-lang="pt">PT</button>
+          </div>
         </div>
       </div>
     </aside>
@@ -166,7 +170,7 @@
 
       <footer class="footer">
         <div class="footer__section">
-          <h5>Contact</h5>
+          <h5 data-lang-en="Contact" data-lang-pt="Contacto">Contact</h5>
           <ul>
             <li>hello@vidahostellisbon.com</li>
             <li>+351 21 000 1234</li>
@@ -174,7 +178,7 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h5>Follow</h5>
+          <h5 data-lang-en="Follow" data-lang-pt="Seguir">Follow</h5>
           <ul>
             <li><a href="#">Instagram</a></li>
             <li><a href="#">TikTok</a></li>
@@ -182,15 +186,16 @@
           </ul>
         </div>
         <div class="footer__section">
-          <h5>Legal</h5>
+          <h5 data-lang-en="Legal" data-lang-pt="Jurídico">Legal</h5>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">Cookie Settings</a></li>
+            <li><a href="#"data-lang-en="Privacy Policy" data-lang-pt="Política de Privacidade">Privacy Policy</a></li>
+            <li><a href="#"data-lang-en="Terms >Terms &amp; Conditions< Conditions" data-lang-pt="Termos e Condições">Terms &amp; Conditions</a></li>
+            <li><a href="#"data-lang-en="Cookie Settings" data-lang-pt="Configurações de Cookies">Cookie Settings</a></li>
           </ul>
         </div>
       </footer>
     </main>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/lang.js"></script>
   </body>
 </html>
